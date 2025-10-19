@@ -1,53 +1,19 @@
-# videoplayer-jslib тестовый видеоплеер
-
-<!-- Плеер будет создан с задержкой, после того как загрузятся все ресурсы на странице. Для этого используется событие `DOMContentLoaded`. Благодаря этой особенности можно вызывать функцию `createPlayer` раньше, чем загрузятся все необходимые библиотеки: jQuery и Playable.
- -->
-
 # Библиотека для создания видеоплеера
 
 Минимальный набор инструментов, который нужен для создания своего видеоплеера. Все элементы можно кастомизировать на свой вкус и цвет.
 
-![max example](screenshots/max.gif)
 
 Построен на базе библиотеки [Playable](https://wix.github.io/playable/).
 
 ## Пример
 
 https://runcken.github.io/videoplayer-jslib/
-
-file:///home/runcken/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BA%D0%B8%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202025-10-19%2019-44-26.png
-
-
-
-
+<img width="829" height="623" alt="Снимок экрана от 2025-10-19 19-44-26" src="https://github.com/user-attachments/assets/f09a28bf-088e-4e2e-a94d-b212c2aff0cc" />
 
 ## Как подключить
 
-JS код поставляется в виде одного файла `player.js`, который нужно скачать из этого репозитория. Для работы он требует двух библиотек - [jQuery](https://jquery.com/) и [Playable](https://wix.github.io/playable/). Пример подключения в браузере:
-
-```html
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
-<script src="player.js"></script>
-```
-
-Для работы библиотека требует HTML разметки. Вот полный пример с минимальным количеством настроек:
-
-```html
-<div id="player" style="width: 800px; height: 600px;">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
-<script src="player.js"></script>
-
-<script type="text/javascript">
-  createPlayer({elementId: 'player'});
-</script>
-```
-
-Этот код добавит на страницу плеер, который играет видео по [этой ссылке](https://dvmn.org/media/filer_public/78/db/78db3456-3fd3-4504-9ed9-d2d1fd843c0b/highest_peak.mp4).
+JS код поставляется в виде одного файла `player.js`, который нужно скачать из этого репозитория. Для работы он требует двух библиотек - [jQuery](https://jquery.com/) и [Playable](https://wix.github.io/playable/). 
+После запуска index.html откроется страница с плеером, с воспроизводимым видео по [этой ссылке](https://dvmn.org/media/filer_public/78/db/78db3456-3fd3-4504-9ed9-d2d1fd843c0b/highest_peak.mp4).
 
 Если хочется выбрать другое видео, с помощью аргумента `src` плееру можно указать какое видео проигрывать, ссылки обязаны заканчиваться расширением файла:
 
