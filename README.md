@@ -1,0 +1,2 @@
+# videoplayer-jslib
+тестовый плеер
