@@ -11,7 +11,15 @@
       color: white;
       cursor: pointer;
       font-size: 160%;
-      margin: 3px;
+      width: 50px;
+      transition: all 0.3 ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .button:active {
+      background: rgba(255,255,255, 0.2);
+      transform: scale(0.95);
     }
     .video-player {
       width: 800px;
@@ -25,14 +33,25 @@
       flex: 1;
     }
     .control-panel {
-      background: grey;
+      background: black;
       display: flex;
+    }
+    .progress {
+       background-color: black;
+       height: 2px;
+    }
+    .progress-slider {
+      background-color: red;
+      height:2px;
     }
   </style>
 </head>
   <body>
     <div id="player" class="video-player">
       <div class="video-container js-video-container"></div>
+        <div class="progress js-progress">
+          <div class="progress-slider js-progress-slider"></div>
+      </div>
       <div class="control-panel">
         <button class="button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
         <button class="button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
