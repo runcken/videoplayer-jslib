@@ -4,22 +4,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="font-awesome.min.css" style=>
     <style>
-      .js-play-button {
+      button {
         border: none;
         background: transparent;
         color: white;
         cursor: pointer;
-        font-size: 200%;
+        font-size: 150%;
       }
     </style>
 </head>
 <body>
   <div id="player" style="width: 800px; height: 600px;">
     <div class="js-video-container" style="width: 100%; height: 100%"></div>
-    <div style="height:36px; background: black; padding-left: 300px">
-      <button class="js-play-button">
-        <i class="fa fa-play" aria-hidden="true"></i>
-      </button>
+    <div style="height:36px; background: black;">
+      <button class="js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button class="js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
   </div>
 </div>
 
