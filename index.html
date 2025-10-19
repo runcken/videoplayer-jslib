@@ -35,6 +35,8 @@
     .control-panel {
       background: black;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .progress {
        background-color: black;
@@ -43,6 +45,9 @@
     .progress-slider {
       background-color: red;
       height:2px;
+    }
+    .left-controls, .right-controls {
+      display: flex;
     }
   </style>
 </head>
@@ -53,10 +58,15 @@
           <div class="progress-slider js-progress-slider"></div>
       </div>
       <div class="control-panel">
+        <div class="left-controls">
         <button class="button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
         <button class="button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
         <button class="button js-volume-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
         <button class="button js-mute-button" hidden><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+      </div>
+      <div class="right-controls">
+        <button class="button js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
+      </div>
       </div>
     </div>
 
