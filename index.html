@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Videoplayer</title>
   <link rel="icon" href="logo.svg" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" style=>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     .button {
       border: none;
@@ -13,7 +13,6 @@
       cursor: pointer;
       font-size: 160%;
       width: 50px;
-      transition: all 0.3 ease;
     }
     .button:hover {
       transform: scale(1.1);
@@ -62,8 +61,8 @@
         <div class="left-controls">
         <button class="button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
         <button class="button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
-        <button class="button js-volume-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
-        <button class="button js-mute-button" hidden><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+        <button class="button js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+        <button class="button js-mute-button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
       </div>
       <div class="right-controls">
         <button class="button js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
@@ -75,7 +74,7 @@
     <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
     <script src="player.js"></script>
 
-    <script type="text/javascript">
+    <script>
       createPlayer({
         elementId: "player",
         src: 'https://dvmn.org/media/filer_public/d0/16/d016d9b8-4180-4bb9-ad83-0241f61627b8/samsung_demo_-_alive_in_color.mp4',
