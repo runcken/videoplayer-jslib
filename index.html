@@ -11,8 +11,8 @@
       background: transparent;
       color: white;
       cursor: pointer;
-      font-size: 160%;
-      width: 50px;
+      font-size: 125%;
+      width: 37px;
     }
     .button:hover {
       transform: scale(1.1);
@@ -25,7 +25,7 @@
       width: 800px;
       height: 600px;
       box-shadow: 0 0 10px rgba(0,0,0,0.9);
-      margin: 20px;
+      margin: 0px;
       display: flex;
       flex-direction: column;
     }
@@ -34,6 +34,7 @@
     }
     .control-panel {
       background: black;
+      height: 44px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -54,9 +55,9 @@
   <body>
     <div id="player" class="video-player">
       <div class="video-container js-video-container"></div>
-        <div class="progress js-progress">
+        <!-- <div class="progress js-progress">
           <div class="progress-slider js-progress-slider"></div>
-      </div>
+      </div> -->
       <div class="control-panel">
         <div class="left-controls">
         <button class="button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
