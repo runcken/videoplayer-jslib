@@ -37,19 +37,44 @@
     }
     .control-panel {
       background: black;
-      height: 45px;
+      height: 43px;
       display: flex;
-      justify-content: space-between;
+      /*justify-content: space-between;*/
       align-items: center;
       font-family: 'Roboto', sans-serif;
     }
-    .progress {
-       background-color: black;
-       height: 2px;
+    .progress-container {
+      flex: 1;
+      margin: 0 11px;
+      height: 5px;
+      background: black;
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
     }
     .progress-slider {
-      background-color: red;
-      height:2px;
+      position: absolute;
+      background: #f8104d;
+      height: 5px;
+      border-radius: 3px;
+      width: 0%;
+    }
+    .progress-handle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #f8104d;
+      border: 3px solid white;
+      border-radius: 50%;
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
+      opacity: 1;
+      box-shadow: 0 0 4px rgba(0,0,0,0.5);
+      transition: transform 0.1s;
+    }
+    .progress-container:hover .progress-handle {
+      transform: translate(50%, -50%) scale(1.2);
     }
     .left-controls, .right-controls {
       display: flex;
@@ -67,17 +92,19 @@
   <body>
     <div id="player" class="video-player">
       <div class="video-container js-video-container"></div>
-        <!-- <div class="progress js-progress">
-          <div class="progress-slider js-progress-slider"></div>
-      </div> -->
       <div class="control-panel">
         <div class="left-controls">
-        <button class="button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
-        <button class="button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
-        <button class="button js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
-        <button class="button js-mute-button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
-        <span class="time js-current-time"></span>
-      </div>
+          <button class="button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
+          <button class="button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+          <button class="button js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+          <button class="button js-mute-button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+          <span class="time js-current-time"></span>
+        </div>
+        <div class="progress-container js-progress">
+          <div class="progress-slider js-progress-slider">
+            <div class="progress-handle"></div>
+          </div>
+        </div>
       <div class="right-controls">
         <span class="time js-duration"></span>
         <button class="button js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
