@@ -5,6 +5,9 @@
   <title>Videoplayer</title>
   <link rel="icon" href="logo.svg" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     .button {
       border: none;
@@ -34,10 +37,11 @@
     }
     .control-panel {
       background: black;
-      height: 44px;
+      height: 45px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-family: 'Roboto', sans-serif;
     }
     .progress {
        background-color: black;
@@ -49,6 +53,14 @@
     }
     .left-controls, .right-controls {
       display: flex;
+      align-items: center;
+    }
+    .time {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      margin: 5 10px;
     }
   </style>
 </head>
@@ -64,8 +76,10 @@
         <button class="button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
         <button class="button js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
         <button class="button js-mute-button" hidden><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+        <span class="time js-current-time"></span>
       </div>
       <div class="right-controls">
+        <span class="time js-duration"></span>
         <button class="button js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
       </div>
       </div>
